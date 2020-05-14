@@ -1,0 +1,28 @@
+* 一些技巧
+
+** 国内使用 guix pull
+
+在国内网络使用guix pull的话可以先拷贝github镜像的源码仓库到本地再更新
+
+*** 拷贝 github 的 guix-mirror
+
+
+#+BEGIN_SRC sh
+  git clone https://github.com/guix-mirror/guix
+#+END_SRC
+
+*** 使用本地的guix源码
+
+#+BEGIN_SRC sh
+  guix pull --url=/path/to/guix
+#+END_SRC
+
+
+*** 保持源码更新
+
+#+BEGIN_SRC sh
+  cd /path/to/guix && git pull
+#+END_SRC
+
+
+
