@@ -1,28 +1,47 @@
 * 一些技巧
 
-** 国内使用 guix pull
+** 国内网络环境使用 guix pull
 
-在国内网络使用guix pull的话可以先拷贝github镜像的源码仓库到本地再更新
+地址:
 
-*** 拷贝 github 的 guix-mirror
+官方 git仓库  http://git.savannah.gnu.org/cgit/guix.git
+github的镜像  https://github.com/guix-mirror/guix
 
+
+在国内网络环境访问官方的git仓库会很慢
+很慢的情况下可以使用github的镜像
+
+
+*** 拷贝guix仓库到本地
 
 #+BEGIN_SRC sh
-  git clone https://github.com/guix-mirror/guix
+  git clone 仓库地址
 #+END_SRC
 
-*** 使用本地的guix源码
+*** 保持源码更新
+
+#+BEGIN_SRC sh
+  # 同步仓库的更新到本地
+  cd /path/to/guix && git pull
+  # 然后运行 guix pull
+#+END_SRC
+
+*** 使用本地的guix源码运行 guix pull
+
+命令行参数方法:
 
 #+BEGIN_SRC sh
   guix pull --url=/path/to/guix
 #+END_SRC
 
+配置文件方法:
 
-*** 保持源码更新
+在 ${HOME}/.config/guix/channels.scm 写入以下内容
 
-#+BEGIN_SRC sh
-  cd /path/to/guix && git pull
+#+BEGIN_SRC lisp
+  (list (channel
+         (name 'guix)
+         (url "/path/to/guix")))
 #+END_SRC
-
 
 
