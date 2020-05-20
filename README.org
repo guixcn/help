@@ -35,7 +35,10 @@
 4. 运行 ~ibus-setup~ 添加你喜欢的输入法。
 5. 好了，你可以使用 ~ibus~ 来输入中文了。
 
-如果 ~ibus~ 无法正常启动，请删除 ~/.cache/ibus 之后再尝试一次。
+*重要：*
+#+begin_quote
+  *如果 ~ibus~ 无法正常启动，请删除 =~/.cache/ibus= 之后再尝试一次。*
+#+end_quote
 
 *** 设置 ~fcitx~
 @pmeiyu 不使用fcitx，此段略。
