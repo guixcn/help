@@ -37,7 +37,7 @@
 
 *重要：*
 #+begin_quote
-  *如果 ~ibus~ 无法正常启动，请删除 =~/.cache/ibus= 之后再尝试一次。*
+  如果 ~ibus~ 无法正常启动，请删除 =~/.cache/ibus= 之后再尝试一次。
 #+end_quote
 
 *** 设置 ~fcitx~
