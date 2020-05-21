@@ -12,6 +12,9 @@
 
 *** 设置 ~ibus~
 1. 安装 ~ibus~  和 ~ibus-libpinyin~ （或 ~ibus-rime~ ）。
+   #+BEGIN_SRC shell
+     guix package -i ibus ibus-rime
+   #+END_SRC
 2. 设置以下的环境变量。bash用户添加到 ~/.profile 文件里，zsh用
    户添加到 ~/.zprofile 文件里。
    #+BEGIN_SRC sh
@@ -32,7 +35,14 @@
      export GUIX_GTK3_IM_MODULE_FILE=$HOME/.guix-profile/lib/gtk-3.0/3.0.0/immodules-gtk3.cache
    #+END_SRC
 3. 运行 ~ibus-daemon --xim --replace --daemonize~ 以启动 ~ibus-daemon~ 。
-4. 运行 ~ibus-setup~ 添加你喜欢的输入法。
+   #+BEGIN_SRC shell
+     rm -r ~/.cache/ibus
+     ibus-daemon --xim --replace --daemonize
+   #+END_SRC
+4. 运行 ~ibus-setup~ 进入设置图形界面，添加和设置输入法。
+   #+BEGIN_SRC shell
+     ibus-setup
+   #+END_SRC
 5. 好了，你可以使用 ~ibus~ 来输入中文了。
 
 *重要：*
