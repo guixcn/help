@@ -11,7 +11,7 @@
 你可以选择使用 ~ibus~ 或者 ~fcitx~ 。
 
 *** 设置 ~ibus~
-1. 安装 ~ibus~  和 ~ibus-libpinyin~ （或 ~ibus-rime~ ）。
+1. 安装 ~ibus~  和 ~ibus-rime （或者 ~ibus-libpinyin）。
    #+BEGIN_SRC shell
      guix package -i ibus ibus-rime
    #+END_SRC
