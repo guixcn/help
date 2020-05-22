@@ -52,3 +52,5 @@
 
 *** 设置 ~fcitx~
 @pmeiyu 不使用fcitx，此段略。
+
+本页面使用 [[http://creativecommons.org/licenses/by-nd/4.0/][Creative Commons Attribution-NoDerivatives 4.0 International License]] 授权。
