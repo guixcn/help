@@ -57,3 +57,14 @@
 
 *** 设置 ~fcitx~
 @pmeiyu 不使用fcitx，此段略。
+
+* 贡献
+
+  - 你必须接受把你贡献的内容以下面的许可证发布。
+  - 请克隆这个仓库，添加你的修改，然后提交Pull Request。
+
+* 许可证
+
+  除非另有说明，则：
+  - 这个仓库里的代码以 [[https://www.gnu.org/licenses/gpl-3.0.en.html][GPLv3]] 许可证发布。
+  - 这个仓库里的文档以 [[https://creativecommons.org/licenses/by-nc/4.0/legalcode][CC BY-NC v4.0]] 许可证发布。
