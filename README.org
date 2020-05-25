@@ -11,7 +11,7 @@
 你可以选择使用 ~ibus~ 或者 ~fcitx~ 。
 
 *** 设置 ~ibus~
-1. 安装 ~ibus~  和 ~ibus-rime （或者 ~ibus-libpinyin）。
+1. 安装 ~ibus~  和 ~ibus-rime~ （或 ~ibus-libpinyin~ ）。
    #+BEGIN_SRC shell
      guix package -i ibus ibus-rime
    #+END_SRC
@@ -34,23 +34,37 @@
      export GUIX_GTK2_IM_MODULE_FILE=$HOME/.guix-profile/lib/gtk-2.0/2.10.0/immodules-gtk2.cache
      export GUIX_GTK3_IM_MODULE_FILE=$HOME/.guix-profile/lib/gtk-3.0/3.0.0/immodules-gtk3.cache
    #+END_SRC
-3. 运行 ~ibus-daemon --xim --replace --daemonize~ 以启动 ~ibus-daemon~ 。
+3. 如果你曾经安装过 ~ibus~ ，请删除 =~/.cache/ibus= 这个文件夹。不匹配的
+   =~/.cache/ibus= 可能导致 ~ibus~ 无法启动。这是一个已知的bug。
    #+BEGIN_SRC shell
      rm -r ~/.cache/ibus
+   #+END_SRC
+4. 运行 ~ibus-daemon --xim --replace --daemonize~ 以启动 ~ibus-daemon~ 。
+   #+BEGIN_SRC shell
      ibus-daemon --xim --replace --daemonize
    #+END_SRC
-4. 运行 ~ibus-setup~ 进入设置图形界面，添加和设置输入法。
+5. 运行 ~ibus-setup~ 进入设置图形界面，添加和设置输入法。
    #+BEGIN_SRC shell
      ibus-setup
    #+END_SRC
-5. 好了，你可以使用 ~ibus~ 来输入中文了。
+6. 好了，你可以使用 ~ibus~ 来输入中文了。
 
 *重要：*
 #+begin_quote
-  如果 ~ibus~ 无法正常启动，请删除 =~/.cache/ibus= 之后再尝试一次。
+  如果 ~ibus~ 无法正常启动，请删除 =~/.cache/ibus= 之后再尝试一次。如果你更新了
+  ~ibus~ 软件包，也需要删除 =~/.cache/ibus= 。这是一个已知的bug。
 #+end_quote
 
 *** 设置 ~fcitx~
 @pmeiyu 不使用fcitx，此段略。
 
-本页面使用 [[http://creativecommons.org/licenses/by-nd/4.0/][Creative Commons Attribution-NoDerivatives 4.0 International License]] 授权。
+* 贡献
+
+  - 你必须接受把你贡献的内容以下面的许可证发布。
+  - 请克隆这个仓库，添加你的修改，然后提交Pull Request。
+
+* 许可证
+
+  除非另有说明，则：
+  - 这个仓库里的代码以 [[https://www.gnu.org/licenses/gpl-3.0.en.html][GPLv3]] 许可证发布。
+  - 这个仓库里的文档以 [[https://creativecommons.org/licenses/by-nc/4.0/legalcode][CC BY-NC v4.0]] 许可证发布。
