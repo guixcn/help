@@ -12,8 +12,12 @@
 
 *** 设置 ~ibus~
 1. 安装 ~ibus~  和 ~ibus-libpinyin~ （或 ~ibus-rime~ ）。
-   #+BEGIN_SRC shell
-     guix package -i ibus ibus-rime
+   #+BEGIN_SRC scheme
+     (operating-system
+       (packages (cons* ibus ibus-rime dconf
+                        %base-packages))
+       ...
+       )
    #+END_SRC
 2. 设置以下的环境变量。bash用户添加到 ~/.profile 文件里，zsh用
    户添加到 ~/.zprofile 文件里。
