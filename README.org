@@ -15,7 +15,7 @@
    赖 ~dconf~ ，所以你需要同时安装 ~dconf~ 。
    #+BEGIN_SRC scheme
      (operating-system
-       (packages (cons* ibus ibus-rime dconf
+       (packages (cons* ibus ibus-libpinyin dconf
                         %base-packages))
        ...
        )
