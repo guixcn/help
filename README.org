@@ -11,12 +11,23 @@
 你可以选择使用 ~ibus~ 或者 ~fcitx~ 。
 
 *** 设置 ~ibus~
+<<<<<<< HEAD
 1. 安装 ~ibus~  和 ~ibus-rime~ （或 ~ibus-libpinyin~ ）。
    #+BEGIN_SRC shell
      guix package -i ibus ibus-rime
+=======
+1. 安装 ~ibus~ 和 ~ibus-libpinyin~ （或 ~ibus-rime~ ）。 ~ibus-setup~ 在运行时依
+   赖 ~dconf~ ，所以你需要同时安装 ~dconf~ 。
+   #+BEGIN_SRC scheme
+     (operating-system
+       (packages (cons* ibus ibus-libpinyin dconf
+                        %base-packages))
+       ...
+       )
    #+END_SRC
-2. 设置以下的环境变量。bash用户添加到 ~/.profile 文件里，zsh用
-   户添加到 ~/.zprofile 文件里。
+
+2. 设置以下的环境变量。bash用户添加到 =~/.profile= 文件里，zsh用户添加到
+   =~/.zprofile= 文件里。
    #+BEGIN_SRC sh
      export GTK_IM_MODULE="ibus"
      export QT_IM_MODULE="ibus"
@@ -34,19 +45,29 @@
      export GUIX_GTK2_IM_MODULE_FILE=$HOME/.guix-profile/lib/gtk-2.0/2.10.0/immodules-gtk2.cache
      export GUIX_GTK3_IM_MODULE_FILE=$HOME/.guix-profile/lib/gtk-3.0/3.0.0/immodules-gtk3.cache
    #+END_SRC
+
+   注：
+   #+begin_quote
+     Guix里的GDM不会自动执行用户的login shell，所以 =~/.profile= 文件里的环境变
+     量在登录之后不会生效。推荐使用SDDM。
+   #+end_quote
+
 3. 如果你曾经安装过 ~ibus~ ，请删除 =~/.cache/ibus= 这个文件夹。不匹配的
    =~/.cache/ibus= 可能导致 ~ibus~ 无法启动。这是一个已知的bug。
    #+BEGIN_SRC shell
      rm -r ~/.cache/ibus
    #+END_SRC
+
 4. 运行 ~ibus-daemon --xim --replace --daemonize~ 以启动 ~ibus-daemon~ 。
    #+BEGIN_SRC shell
      ibus-daemon --xim --replace --daemonize
    #+END_SRC
+
 5. 运行 ~ibus-setup~ 进入设置图形界面，添加和设置输入法。
    #+BEGIN_SRC shell
      ibus-setup
    #+END_SRC
+
 6. 好了，你可以使用 ~ibus~ 来输入中文了。
 
 *重要：*
