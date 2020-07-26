@@ -3,16 +3,15 @@
 ** 国内网络环境使用 ~guix pull~
 
 Guix源码仓库地址:
-- 官方git仓库：https://git.savannah.gnu.org/cgit/guix.git
-- GitHub镜像：https://github.com/guix-mirror/guix
+- 官方仓库：https://git.savannah.gnu.org/cgit/guix.git
+- 国内镜像：https://mirror.guix.org.cn/git/guix.git
 
-在国内网络环境访问官方的git仓库可能会很慢，很慢的情况下可以使用GitHub的镜像。
-
+在国内网络环境访问官方的Git仓库可能会很慢，很慢的情况下可以使用国内的镜像。
 
 *** 拷贝Guix仓库到本地
 
 #+BEGIN_SRC sh
-  git clone https://git.savannah.gnu.org/git/guix.git
+  git clone https://mirror.guix.org.cn/git/guix.git
 #+END_SRC
 
 *** 保持源码更新

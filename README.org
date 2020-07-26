@@ -7,6 +7,7 @@
 
 * 常见的问题
 
+<<<<<<< HEAD
 ** 怎样设置中文输入法
 你可以选择使用 ~ibus~ 或者 ~fcitx~ 。
 
@@ -78,6 +79,11 @@
 
 *** 设置 ~fcitx~
 @pmeiyu 不使用fcitx，此段略。
+=======
+  - [[https://guix-china.github.io/wiki/mirror/][Guix下载软件包太慢了，怎么使用镜像？]]
+  - [[https://guix-china.github.io/wiki/mirror/][~guix pull~ 太慢了，怎么使用镜像？]]
+  - [[https://guix-china.github.io/wiki/input-method/][怎么设置输入法？]]
+>>>>>>> 2f493d779b8756e56ed887d417bede429f66cc92
 
 * 贡献
 
