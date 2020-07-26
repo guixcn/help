@@ -7,16 +7,13 @@
 
 * 常见的问题
 
-<<<<<<< HEAD
 ** 怎样设置中文输入法
 你可以选择使用 ~ibus~ 或者 ~fcitx~ 。
 
 *** 设置 ~ibus~
-<<<<<<< HEAD
 1. 安装 ~ibus~  和 ~ibus-rime~ （或 ~ibus-libpinyin~ ）。
    #+BEGIN_SRC shell
      guix package -i ibus ibus-rime
-=======
 1. 安装 ~ibus~ 和 ~ibus-libpinyin~ （或 ~ibus-rime~ ）。 ~ibus-setup~ 在运行时依
    赖 ~dconf~ ，所以你需要同时安装 ~dconf~ 。
    #+BEGIN_SRC scheme
@@ -79,11 +76,13 @@
 
 *** 设置 ~fcitx~
 @pmeiyu 不使用fcitx，此段略。
-=======
   - [[https://guix-china.github.io/wiki/mirror/][Guix下载软件包太慢了，怎么使用镜像？]]
   - [[https://guix-china.github.io/wiki/mirror/][~guix pull~ 太慢了，怎么使用镜像？]]
   - [[https://guix-china.github.io/wiki/input-method/][怎么设置输入法？]]
->>>>>>> 2f493d779b8756e56ed887d417bede429f66cc92
+
+** .config/guix/current 和 .guix-profile/ 有什么區別？
+- .config/guix/current 里面只有 guix。它在 `guix pull` 之后指向最新的 guix.
+- .guix-profile 里面含有用戶通過 `guix install` 安裝的軟件包。
 
 * 贡献
 
