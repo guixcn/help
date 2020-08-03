@@ -39,3 +39,13 @@ Guix源码仓库地址:
          (name 'guix)
          (url "/path/to/guix")))
 #+END_SRC
+
+** Epiphany 顯示中文爲方塊的解決辦法
+在 Guix 1.1.0 的最近版本上（guix (GNU Guix)
+636d573b7496d2b03670dd9db98b464141761fc6）中文網頁的中文顯示爲方塊，調整網頁字符
+編碼也無法解決。通過 guix-bugs 郵件列表，我得到了方法：
+#+begin_src shell
+ln -s ~/.guix-profile/share/fonts ~/.fonts
+#+end_src
+
+然後重啓電腦。中文網頁就顯示正常了。
